@@ -13,6 +13,7 @@ const ProjectCard = ({ title, description, tags, image, github, live }) => (
     variants={fadeInUp}
     whileHover={{ y: -8 }}
     transition={{ duration: 0.25 }}
+    style={{ willChange: "transform, opacity" }}
     className="group bg-white dark:bg-dark-700 rounded-2xl overflow-hidden shadow-card dark:shadow-card-dark border border-gray-100 dark:border-white/10 flex flex-col h-full"
   >
     {/* Image */}
@@ -21,6 +22,7 @@ const ProjectCard = ({ title, description, tags, image, github, live }) => (
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 

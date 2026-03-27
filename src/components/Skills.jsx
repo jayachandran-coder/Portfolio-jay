@@ -8,6 +8,7 @@ const SkillCard = ({ name, icon: Icon, level, color }) => (
   <motion.div
     variants={fadeInUp}
     whileHover={{ scale: 1.04, y: -4 }}
+    style={{ willChange: "transform, opacity" }}
     className="bg-white dark:bg-dark-700 rounded-2xl p-5 shadow-card dark:shadow-card-dark border border-gray-100 dark:border-white/10 group cursor-default"
   >
     <div className="flex items-center gap-3 mb-3">
@@ -29,6 +30,7 @@ const SkillCard = ({ name, icon: Icon, level, color }) => (
         whileInView={{ width: `${level}%` }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
+        style={{ willChange: "width" }}
         className="h-full rounded-full bg-gradient-to-r from-primary-500 to-purple-500"
       />
     </div>

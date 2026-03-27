@@ -16,6 +16,7 @@ const TimelineItem = ({ role, company, period, description, tags, type, isLast }
     <div className="flex flex-col items-center flex-shrink-0">
       <motion.div
         whileHover={{ scale: 1.2 }}
+        style={{ willChange: "transform" }}
         className={`w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10 ${
           type === 'work'
             ? 'bg-gradient-to-br from-primary-500 to-purple-600 text-white'
@@ -32,6 +33,7 @@ const TimelineItem = ({ role, company, period, description, tags, type, isLast }
     {/* Content card */}
     <motion.div
       whileHover={{ x: 4 }}
+      style={{ willChange: "transform" }}
       className="flex-1 bg-white dark:bg-dark-700 rounded-2xl p-5 shadow-card dark:shadow-card-dark border border-gray-100 dark:border-white/10 mb-6"
     >
       <div className="flex flex-wrap items-start justify-between gap-2 mb-1">

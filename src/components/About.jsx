@@ -33,6 +33,7 @@ const About = () => {
               src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&auto=format&fit=crop"
               alt="Developer workspace"
               className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
@@ -43,6 +44,7 @@ const About = () => {
               <motion.span
                 key={label}
                 whileHover={{ scale: 1.05 }}
+                style={{ willChange: "transform" }}
                 className="inline-flex items-center gap-1.5 bg-white dark:bg-dark-700 shadow-lg border border-gray-100 dark:border-white/10 px-3 py-1.5 rounded-full text-xs font-semibold text-gray-700 dark:text-gray-200"
               >
                 <Icon className="text-primary-500" size={13} />

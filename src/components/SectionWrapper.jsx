@@ -30,6 +30,7 @@ const SectionWrapper = ({ id, children, className = '', title, subtitle }) => {
         variants={container}
         initial="hidden"
         animate={isInView ? 'show' : 'hidden'}
+        style={{ willChange: 'opacity, transform' }}
       >
         {/* Optional section title */}
         {(title || subtitle) && (

@@ -39,16 +39,19 @@ const Hero = () => {
         <motion.div
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+          style={{ willChange: "transform" }}
           className="absolute top-1/4 -left-32 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ scale: [1.2, 1, 1.2], rotate: [0, -90, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+          style={{ willChange: "transform" }}
           className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+          style={{ willChange: "transform" }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"
         />
         {/* Grid overlay */}
@@ -169,6 +172,8 @@ const Hero = () => {
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&auto=format&fit=crop&crop=faces"
                   alt="Jaya Chandran – Full Stack Developer"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fetchpriority="high"
+                  loading="eager"
                 />
               </div>
               {/* Badge */}
@@ -195,6 +200,7 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
+            style={{ willChange: "transform" }}
             className="w-5 h-8 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-start justify-center pt-1"
           >
             <div className="w-1 h-2 bg-primary-500 rounded-full" />
